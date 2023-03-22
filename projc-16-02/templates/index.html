@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                background-color: pink;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+            }
+            img{
+                max-width: 60px;
+                border-radius: 10px;
+            }
+            table{
+                width:50%;
+            }
+            th{
+                height:50px;
+            }
+          
+        </style>
+    </head>
+    <body>
+    <table border="1">
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>PURCHASED_ITEM</th>
+            <th>AMOUNT</th>
+            <th>URL</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.purchased}}</td>
+            <td>{{i.amount}}</td>
+            <td><img src="{{ i.url }}"></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>

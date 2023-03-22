@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table border="1px">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>COURSE</th>
+                <th>OPTIONS</th>
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.course}}</td>
+                <td><a href="{{url_for('edit',id=i.id)}}">EDIT</a></td>
+        </tr>
+            {%endfor%}
+        </table>
+
+
+
+
+    </body>
